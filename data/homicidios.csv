@@ -1,23 +1,61 @@
-distrito,ano,ocorrencias
-BARCARENA,2010,25
-VILA DOS CABANOS,2010,27
-BARCARENA,2011,18
-MURUCUPI,2011,1
-VILA DOS CABANOS,2011,21
-BARCARENA,2012,20
-VILA DOS CABANOS,2012,32
-BARCARENA,2013,17
-VILA DOS CABANOS,2013,28
-BARCARENA,2014,21
-VILA DOS CABANOS,2014,41
-BARCARENA,2015,24
-VILA DOS CABANOS,2015,35
-BARCARENA,2016,9
-VILA DOS CABANOS,2016,25
-BARCARENA,2017,23
-VILA DOS CABANOS,2017,24
-BARCARENA,2018,50
-VILA DOS CABANOS,2018,4
-BARCARENA,2019,37
-BARCARENA,2020,35
-BARCARENA,2021,20
+distrito,ano,ocorrencias,descricao
+Barcarena (Sede),2010,25,"Centro, Outros, Pedreira e Zona Rural"
+Barcarena (Sede),2011,18,"Centro e Zona Rural"
+Barcarena (Sede),2012,20,"Centro, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2013,17,"Centro e Zona Rural "
+Barcarena (Sede),2014,21,"Centro, Imobiliária, NOVO 01, NOVO 02, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2015,24,"Betania, Centro, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2016,9,"Centro e Zona Rural"
+Barcarena (Sede),2017,23,"Centro, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2018,50,"Centro e Vila dos Cabanos"
+Barcarena (Sede),2019,37,"Vila dos Cabanos"
+Barcarena (Sede),2020,35,"Vila dos Cabanos"
+Barcarena (Sede),2021,20,
+Murucupi,2010,27,"Vila dos Cabanos, Centro e Outros"
+Murucupi,2011,22,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2012,32,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2013,28,"Vila dos Cabanos, Centro e  Outros"
+Murucupi,2014,41,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2015,35,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2016,25,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2017,24,"Vila dos Cabanos, Centro e Outros"
+Murucupi,2018,4,"Vila dos Cabanos, Centro e Outros"
+Murucupi,2019,0,"Sem ocorrências registradas"
+Murucupi,2020,0,"Sem ocorrências registradas"
+Murucupi,2021,0,"Sem ocorrências registradas"
+Ilhas,2010,0,"Sem ocorrências registradas"
+Ilhas,2011,0,"Sem ocorrências registradas"
+Ilhas,2012,0,"Sem ocorrências registradas"
+Ilhas,2013,0,"Sem ocorrências registradas"
+Ilhas,2014,0,"Sem ocorrências registradas"
+Ilhas,2015,0,"Sem ocorrências registradas"
+Ilhas,2016,0,"Sem ocorrências registradas"
+Ilhas,2017,0,"Sem ocorrências registradas"
+Ilhas,2018,0,"Sem ocorrências registradas"
+Ilhas,2019,0,"Sem ocorrências registradas"
+Ilhas,2020,0,"Sem ocorrências registradas"
+Ilhas,2021,0,"Sem ocorrências registradas"
+Estradas,2010,0,"Sem ocorrências registradas"
+Estradas,2011,0,"Sem ocorrências registradas"
+Estradas,2012,0,"Sem ocorrências registradas"
+Estradas,2013,0,"Sem ocorrências registradas"
+Estradas,2014,0,"Sem ocorrências registradas"
+Estradas,2015,0,"Sem ocorrências registradas"
+Estradas,2016,0,"Sem ocorrências registradas"
+Estradas,2017,0,"Sem ocorrências registradas"
+Estradas,2018,0,"Sem ocorrências registradas"
+Estradas,2019,0,"Sem ocorrências registradas"
+Estradas,2020,0,"Sem ocorrências registradas"
+Estradas,2021,0,"Sem ocorrências registradas"
+Vila do Conde,2010,0,"Sem ocorrências registradas"
+Vila do Conde,2011,0,"Sem ocorrências registradas"
+Vila do Conde,2012,0,"Sem ocorrências registradas"
+Vila do Conde,2013,0,"Sem ocorrências registradas"
+Vila do Conde,2014,0,"Sem ocorrências registradas"
+Vila do Conde,2015,0,"Sem ocorrências registradas"
+Vila do Conde,2016,0,"Sem ocorrências registradas"
+Vila do Conde,2017,0,"Sem ocorrências registradas"
+Vila do Conde,2018,0,"Sem ocorrências registradas"
+Vila do Conde,2019,0,"Sem ocorrências registradas"
+Vila do Conde,2020,0,"Sem ocorrências registradas"
+Vila do Conde,2021,0,"Sem ocorrências registradas"

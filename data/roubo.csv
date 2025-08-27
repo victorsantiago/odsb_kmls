@@ -1,41 +1,61 @@
-distrito,ano,ocorrencias
-BARCARENA,2010,754
-MURUCUPI,2010,1
-VILA DOS CABANOS,2010,1073
-BARCARENA,2011,553
-MURUCUPI,2011,15
-VILA DOS CABANOS,2011,871
-BARCARENA,2012,541
-MURUCUPI,2012,15
-VILA DOS CABANOS,2012,724
-BARCARENA,2013,600
-MURUCUPI,2013,10
-VILA DOS CABANOS,2013,695
-BARCARENA,2014,460
-MURUCUPI,2014,13
-VILA DOS CABANOS,2014,673
-BARCARENA,2015,512
-MURUCUPI,2015,15
-VILA DOS CABANOS,2015,746
-BARCARENA,2016,796
-MURUCUPI,2016,22
-VILA DOS CABANOS,2016,1035
-BARCARENA,2017,984
-MURUCUPI,2017,23
-VILA DOS CABANOS,2017,1025
-BARCARENA,2018,1195
-MURUCUPI,2018,22
-VILA DOS CABANOS,2018,469
-BARCARENA,2019,1276
-MURUCUPI,2019,23
-VILA DOS CABANOS,2019,259
-BARCARENA,2020,1039
-ILHA DAS ONCA,2020,1
-MURUCUPI,2020,19
-VILA DO CONDE,2020,30
-VILA DOS CABANOS,2020,378
-BARCARENA,2021,946
-ILHA DAS ONCA,2021,2
-MURUCUPI,2021,24
-VILA DO CONDE,2021,21
-VILA DOS CABANOS,2021,341
+distrito,ano,ocorrencias,descricao
+Barcarena (Sede),2010,754,"Centro, Pedreira, Vila dos Cabanos, Zona Rural e Outros"
+Barcarena (Sede),2011,553,"Centro, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2012,597,"Centro, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2013,600,"Betania, Centro, Comercial, Imobiliaria, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural "
+Barcarena (Sede),2014,460,"Betania, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2015,512,"Betania, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2016,796,"Betania, Centro, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2017,984,"Betania, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2018,1195,"Betania, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, VILA DES CABANOS, Vila dos Cabanos, VILA S CABANOS e Zona Rural"
+Barcarena (Sede),2019,1276,"Betania, Centro, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2020,1039,"Betania, Centro, Comercial, Imobiliaria, NOVO 01, NOVO 02, Pedreira, Vila dos Cabanos e Zona Rural"
+Barcarena (Sede),2021,946,
+Ilhas,2010,0,"Sem ocorrências registradas"
+Ilhas,2011,0,"Sem ocorrências registradas"
+Ilhas,2012,0,"Sem ocorrências registradas"
+Ilhas,2013,0,"Sem ocorrências registradas"
+Ilhas,2014,0,"Sem ocorrências registradas"
+Ilhas,2015,0,"Sem ocorrências registradas"
+Ilhas,2016,0,"Sem ocorrências registradas"
+Ilhas,2017,0,"Sem ocorrências registradas"
+Ilhas,2018,0,"Sem ocorrências registradas"
+Ilhas,2019,0,"Sem ocorrências registradas"
+Ilhas,2020,1,"Localidade na Ilhas das Onças"
+Ilhas,2021,2,"Localidade na Ilhas das Onças"
+Murucupi,2010,1074,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2011,886,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2012,739,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2013,705,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2014,686,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2015,761,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2016,1057,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2017,1048,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2018,491,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2019,282,"Vila dos Cabanos, Centro, Pioneiro e Outros"
+Murucupi,2020,397,"Vila dos Cabanos, Centro, Jardim Cabano, Pioneiro e Outros"
+Murucupi,2021,365,
+Vila do Conde,2010,0,"Sem ocorrências registradas"
+Vila do Conde,2011,0,"Sem ocorrências registradas"
+Vila do Conde,2012,0,"Sem ocorrências registradas"
+Vila do Conde,2013,0,"Sem ocorrências registradas"
+Vila do Conde,2014,0,"Sem ocorrências registradas"
+Vila do Conde,2015,0,"Sem ocorrências registradas"
+Vila do Conde,2016,0,"Sem ocorrências registradas"
+Vila do Conde,2017,0,"Sem ocorrências registradas"
+Vila do Conde,2018,0,"Sem ocorrências registradas"
+Vila do Conde,2019,0,"Sem ocorrências registradas"
+Vila do Conde,2020,30,Centro
+Vila do Conde,2021,21,
+Estradas,2010,0,"Sem ocorrências registradas"
+Estradas,2011,0,"Sem ocorrências registradas"
+Estradas,2012,0,"Sem ocorrências registradas"
+Estradas,2013,0,"Sem ocorrências registradas"
+Estradas,2014,0,"Sem ocorrências registradas"
+Estradas,2015,0,"Sem ocorrências registradas"
+Estradas,2016,0,"Sem ocorrências registradas"
+Estradas,2017,0,"Sem ocorrências registradas"
+Estradas,2018,0,"Sem ocorrências registradas"
+Estradas,2019,0,"Sem ocorrências registradas"
+Estradas,2020,0,"Sem ocorrências registradas"
+Estradas,2021,0,"Sem ocorrências registradas"
