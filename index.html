@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mapa – Distritos com Timeline (estilo indexescolas)</title>
+  <title>Mapa – Região com Timeline (estilo indexescolas)</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -74,7 +74,7 @@
 <body>
   <div class="app">
     <header>
-      <h1>Mapa — Ocorrências por Distrito</h1>
+      <h1>Mapa — Ocorrências por Região</h1>
       <div class="controls">
         <label class="badge">Tipo:
           <select id="tipoSel" class="select">
@@ -90,8 +90,8 @@
         <label class="badge">Ano:
           <select id="anoSel" class="select"></select>
         </label>
-        <label class="badge">Distrito:
-          <select id="distritoSel" class="select"><option value="__all__">Todos</option></select>
+        <label class="badge">Região:
+          <select id="distritoSel" class="select"><option value="__all__">Todas</option></select>
         </label>
         <span class="badge"><strong id="sumTotal">—</strong> total no ano</span>
         <button id="btnReset" class="badge" style="cursor:pointer;">Limpar</button>
@@ -118,28 +118,24 @@
   </div>
 
   <div class="color-legend" id="colorLegend">
-    <h4 style="margin:0 0 6px;">Cores por distrito</h4>
+    <h4 style="margin:0 0 6px;">Cores por região</h4>
   </div>
 
   <script>
     // === KMLs (mantendo seus caminhos) ===
     const KML_MAP = {
-      "BARCARENA": "web/kml/barcarena.kml",
-      "ESTRADAS": "web/kml/estradas.kml",
-      "ILHAS DAS ONCAS": "web/kml/ilhasdasoncas.kml",
-      "ILHAS": "web/kml/ilhas.kml",
-      "MURUCUPI": "web/kml/murucupi.kml",
-      "VILA DO CONDE": "web/kml/viladoconde.kml",
-      "VILA DOS CABANOS": "web/kml/viladoscabanos.kml",
+      "Barcarena (Sede)": "web/kml/barcarena.kml",
+      "Estradas": "web/kml/estradas.kml",
+      "Ilhas": "web/kml/ilhas.kml",
+      "Murucupi": "web/kml/murucupi.kml",
+      "Vila do Conde": "web/kml/viladoconde.kml",
     };
     const COLOR_MAP = {
       "BARCARENA": "#1f77b4",
       "ESTRADAS": "#8c564b",
-      "ILHAS DAS ONCAS": "#d62728",
       "ILHAS": "#e377c2",
       "MURUCUPI": "#ff7f0e",
       "VILA DO CONDE": "#9467bd",
-      "VILA DOS CABANOS": "#2ca02c",
     };
 
     // === CSVs (mantendo seus caminhos) ===
@@ -151,7 +147,7 @@
       { key: "roubo", path: "data/roubo.csv", label: "Roubo" },
       { key: "trafico_de_drogas", path: "data/trafico_de_drogas.csv", label: "Tráfico de Drogas" },
     ];
-    const CSV_YEAR="ano", CSV_DISTRICT="distrito", CSV_VALUE="ocorrencias";
+    const CSV_YEAR="ano", CSV_DISTRICT="distrito", CSV_VALUE="ocorrencias", CSV_DESC="descricao"; // <-- NOVO
 
     const YEARS = Array.from({length: 2021-2010+1}, (_,i)=> (2010+i));
     let currentYear=2010;
@@ -189,13 +185,27 @@
       else if (Number.isFinite(value) && max===min && max>0){ opacity=0.9; }
       applyStyle(group, color, opacity);
     }
+
+    // === popup agora inclui Descrição (quando houver no CSV do tipo selecionado) ===
     function popupHtmlFor(humanName, summary){
       const rows = summary ? Object.entries(summary.byType).sort((a,b)=> b[1]-a[1]) : [];
       const table = rows.length ? `<table class="minimal"><thead><tr><th>Tipo</th><th>Ocorrências</th></tr></thead><tbody>${
         rows.map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join("")}
       </tbody></table>` : `<i>Sem detalhamento por tipo</i>`;
-      const label = (document.getElementById("tipoSel").value==="__all__"?"":`<div><b>Tipo:</b> ${getSelectedTypeLabel()}</div>`);
-      return [`<b>${humanName}</b>`,`<div><b>Ano:</b> ${currentYear}</div>`,label,`<div><b>Total:</b> ${summary?summary.total:0}</div>`,`<div style="margin-top:6px;"><b>Por tipo:</b></div>`,table].join("");
+      const selTipo = document.getElementById("tipoSel").value;
+      const label = (selTipo==="__all__"?"":`<div><b>Tipo:</b> ${getSelectedTypeLabel()}</div>`);
+      const descBlock = (summary && summary.desc)
+        ? `<div style="margin-top:6px;"><b>Descrição:</b> ${summary.desc}</div>`
+        : ""; // só mostra quando existir
+      return [
+        `<b>${humanName}</b>`,
+        `<div><b>Ano:</b> ${currentYear}</div>`,
+        label,
+        `<div><b>Total:</b> ${summary?summary.total:0}</div>`,
+        descBlock,
+        `<div style="margin-top:6px;"><b>Por tipo:</b></div>`,
+        table
+      ].join("");
     }
     function getActiveAgg(){
       const tipo = document.getElementById("tipoSel").value;
@@ -278,7 +288,7 @@
     }
 
     async function preloadCsvs(){
-      // por tipo
+      // por tipo (cada tipo passa a carregar também uma possível descrição por distrito/ano)
       for (const src of CSV_SOURCES){
         const rows = await loadCsv(src.path);
         const cache={};
@@ -287,22 +297,25 @@
           for (const r of rows.filter(r=> String(r[CSV_YEAR])===String(y))){
             const key = normalizeName(r[CSV_DISTRICT]);
             const val = Number(r[CSV_VALUE]) || 0;
-            if (!agg[key]) agg[key]={ total:0, byType:{} };
+            if (!agg[key]) agg[key]={ total:0, byType:{}, desc: undefined };
             agg[key].total += val;
             agg[key].byType[src.label] = (agg[key].byType[src.label] || 0) + val;
+            // guarda descrição se existir e for não vazia (última não-vazia prevalece)
+            const d = (r[CSV_DESC]!==undefined && r[CSV_DESC]!==null) ? String(r[CSV_DESC]).trim() : "";
+            if (d) agg[key].desc = d;
           }
           const totals=Object.values(agg).map(x=>x.total);
           cache[y]={ byDistrict:agg, min:(totals.length?Math.min(...totals):0), max:(totals.length?Math.max(...totals):0) };
         }
         yearCachePerType[src.key]=cache;
       }
-      // todas
+      // todas (soma dos tipos); por padrão NÃO mostramos descrição em "Todas"
       for (const y of YEARS){
         const agg={};
         for (const src of CSV_SOURCES){
           const cache = yearCachePerType[src.key][y];
           for (const [key,obj] of Object.entries(cache.byDistrict)){
-            if (!agg[key]) agg[key]={ total:0, byType:{} };
+            if (!agg[key]) agg[key]={ total:0, byType:{}, desc: undefined };
             agg[key].total += obj.total;
             for (const [label,v] of Object.entries(obj.byType)){
               agg[key].byType[label] = (agg[key].byType[label] || 0) + v;
