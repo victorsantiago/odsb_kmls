@@ -421,8 +421,7 @@
       💡 Dica
     </div>
     <div class="map-hint-tooltip">
-      Clique sobre as áreas do mapa para ver mais detalhes das ocorrências.
-      Clique sobre as áreas do mapa para ver mais detalhes das ocorrências. *Todos os registros foram considerados. No entanto, registros com o bairro "Outros" não são exibidos.
+      Clique nas regiões do mapa para ver mais detalhes. *Ocorrências com bairro "Outros” são contabilizados, mas não exibidos no mapa.
     </div>
   </div>
 
@@ -1289,6 +1288,19 @@
     }
 
     function updatePillToggleState(){
+      const modo   = modoSelEl.value;
+      const bairro = bairroSelEl.value;
+
+      // Se estiver pesquisando por Bairros E um bairro específico foi escolhido,
+      // desabilita o checkbox e desmarca para impedir interação.
+      if (modo === 'bairro' && bairro && bairro !== "__all__") {
+        pillToggle.disabled = true;
+        pillToggle.checked  = false;
+      } else {
+        // Em qualquer outro caso, mantém o checkbox habilitado.
+        pillToggle.disabled = false;
+      }
+
       updateRegionLabels();
     }
 
@@ -1537,6 +1549,7 @@
         refreshAll();
         fitAllVisible();
         initTimelineDrag();
+        updatePillToggleState();
 
         document.getElementById("tipoSel").addEventListener("change", () => {
           applyFilters();
@@ -1552,6 +1565,7 @@
 
         modoSelEl.addEventListener("change", () => {
           applyModeFromSelect();
+          updatePillToggleState();
         });
 
         distritoSelEl.addEventListener("change", () => {
@@ -1563,6 +1577,7 @@
         bairroSelEl.addEventListener("change", () => {
           if (isDistrictMode()) return;
           updatePolygonVisibility();
+          updatePillToggleState();
           applyFilters();
         });
 
@@ -1582,6 +1597,7 @@
           document.getElementById("anoSel").value = String(currentYear);
           popupLayer.clearLayers();
           updatePolygonVisibility();
+          updatePillToggleState();
           applyFilters();
         });
 
