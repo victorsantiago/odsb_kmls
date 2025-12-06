@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>jardim_cabano</name><Placemark><name>Jardim Cabano</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.7114986091,-1.5199708987,0 -48.7114918259,-1.5199625959,0 -48.7114937863,-1.5199549389,0 -48.7114986091,-1.5199708987,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

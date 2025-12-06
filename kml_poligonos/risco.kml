@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>risco</name><Placemark><name>risco</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.71639569077385,-1.529089418650835,0 -48.70647458533061,-1.546602532863697,0 -48.70216389974905,-1.543484143302502,0 -48.71089854445646,-1.526601302776519,0 -48.71639569077385,-1.529089418650835,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

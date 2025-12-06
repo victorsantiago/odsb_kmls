@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>barbolandia</name><Placemark><name>Barbolandia</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.60091018262693,-1.508231024818239,0 -48.59745558247419,-1.50577428588952,0 -48.60215847626962,-1.497502310383944,0 -48.60332441547541,-1.499331041378049,0 -48.60229355608927,-1.506614798158471,0 -48.60091018262693,-1.508231024818239,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

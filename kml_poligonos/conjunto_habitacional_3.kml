@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>conjunto_habitacional_3</name><Placemark><name>Conjunto Habitacional 3</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.61865724980001,-1.537857387,0 -48.61848740470001,-1.5379037663,0 -48.6184522578,-1.5378510652,0 -48.61865724980001,-1.537857387,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

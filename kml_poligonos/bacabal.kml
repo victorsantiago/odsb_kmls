@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>bacabal</name><Placemark><name>BACABAL</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.63170770612652,-1.514327652708471,0 -48.63472275444479,-1.518282553279915,0 -48.63026831395379,-1.52112093138301,0 -48.6322638862756,-1.523760580473894,0 -48.62990332087303,-1.525799911532517,0 -48.62545167431465,-1.51888622736817,0 -48.63170770612652,-1.514327652708471,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

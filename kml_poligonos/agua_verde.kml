@@ -1,1 +1,11 @@
-
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>agua_verde</name><Placemark><name>Água Verde</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.69260430804491,-1.536583537792738,0 -48.68190866783016,-1.550280936089891,0 -48.6819274475594,-1.548815491592837,0 -48.68409710676527,-1.544178957792378,0 -48.68578357244801,-1.533885739580377,0 -48.68720472516364,-1.532691822314474,0 -48.69260430804491,-1.536583537792738,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

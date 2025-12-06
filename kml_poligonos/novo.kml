@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>bairro_novo</name><Placemark><name>Bairro Novo</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.61876253479999,-1.5130226007,0 -48.6208969155,-1.5158655224,0 -48.6208650798,-1.5158884963,0 -48.62331748667374,-1.519548092032869,0 -48.61913182323342,-1.522858993279077,0 -48.61263641396761,-1.526764967311867,0 -48.608461244132,-1.520484702113556,0 -48.61876253479999,-1.5130226007,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>arapari</name><Placemark><name>Arapari</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.50985031332396,-1.560834354034711,0 -48.5063439879011,-1.56452995013706,0 -48.50445981099669,-1.563338108952256,0 -48.50174352059678,-1.561669305339302,0 -48.50510107338848,-1.558828216993196,0 -48.50708861942815,-1.557417702854921,0 -48.50985031332396,-1.560834354034711,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>

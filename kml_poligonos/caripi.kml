@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><name>caripi</name><Placemark><name>Caripi</name><Polygon>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-48.70720255163771,-1.496655267051934,0 -48.70304624145909,-1.493619755282509,0 -48.70014607574029,-1.488682241265824,0 -48.69930033222681,-1.487969996947263,0 -48.69979906383015,-1.487653753907784,0 -48.70993746451244,-1.493214864232899,0 -48.70835254654105,-1.495428783452482,0 -48.70720255163771,-1.496655267051934,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark></Document></kml>
