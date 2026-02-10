@@ -1550,6 +1550,9 @@
         fitAllVisible();
         initTimelineDrag();
         updatePillToggleState();
+        legendEl.classList.add("collapsed");
+        legendBtn.textContent = "▲";
+
 
         document.getElementById("tipoSel").addEventListener("change", () => {
           applyFilters();
